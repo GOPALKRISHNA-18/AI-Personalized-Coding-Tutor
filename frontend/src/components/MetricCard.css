@@ -1,0 +1,133 @@
+.metric-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px -2px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.06);
+  border-color: #6366f1;
+}
+
+.metric-highlight {
+  border-left: 4px solid #6366f1;
+  background: linear-gradient(135deg, #ffffff 0%, rgba(99, 102, 241, 0.1) 100%);
+}
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.metric-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+  transition: transform 0.25s ease;
+}
+
+.metric-card:hover .metric-icon {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.metric-value {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.metric-subtitle {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+body.dark .metric-card {
+  background: #111827;
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .metric-card:hover {
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.65), 0 0 20px rgba(99, 102, 241, 0.28);
+  border-color: #818cf8;
+}
+
+body.dark .metric-highlight {
+  border-left: 4px solid #818cf8;
+  background: linear-gradient(135deg, #111827 0%, rgba(99, 102, 241, 0.18) 100%);
+}
+
+body.dark .metric-title {
+  color: #94a3b8;
+}
+
+body.dark .metric-icon {
+  background: rgba(99, 102, 241, 0.18);
+  color: #818cf8;
+}
+
+body.dark .metric-value {
+  color: #f8fafc;
+}
+
+body.dark .metric-subtitle {
+  color: #94a3b8;
+}
+
+body.comfort .metric-card {
+  background: #f4ede1;
+  border: 1px solid #dfd2be;
+  box-shadow: 0 1px 3px rgba(60, 45, 30, 0.06);
+}
+
+body.comfort .metric-card:hover {
+  box-shadow: 0 12px 24px rgba(60, 45, 30, 0.14);
+  border-color: #c25e00;
+}
+
+body.comfort .metric-highlight {
+  border-left: 4px solid #c25e00;
+  background: linear-gradient(135deg, #f4ede1 0%, #faeeda 100%);
+}
+
+body.comfort .metric-title {
+  color: #786852;
+}
+
+body.comfort .metric-icon {
+  background: #faeeda;
+  color: #c25e00;
+}
+
+body.comfort .metric-value {
+  color: #382e22;
+}
+
+body.comfort .metric-subtitle {
+  color: #786852;
+}

@@ -1,0 +1,58 @@
+.app-progress-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.app-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.app-progress-value {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.app-progress-track {
+  width: 100%;
+  background: #f1f5f9;
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.app-progress-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.dark .app-progress-header {
+  color: #94a3b8;
+}
+
+body.dark .app-progress-value {
+  color: #f8fafc;
+}
+
+body.dark .app-progress-track {
+  background: #1e293b;
+}
+
+body.comfort .app-progress-header {
+  color: #786852;
+}
+
+body.comfort .app-progress-value {
+  color: #382e22;
+}
+
+body.comfort .app-progress-track {
+  background: #ebe1cf;
+}

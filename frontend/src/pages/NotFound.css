@@ -1,0 +1,116 @@
+.not-found-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: #f8fafc;
+  background-image: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.1) 0px, transparent 50%),
+                    radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.1) 0px, transparent 50%);
+}
+
+.not-found-card {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  padding: 56px 36px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 16px 32px -4px rgba(0, 0, 0, 0.08), 0 6px 12px -4px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+  animation: cardEntrance 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.not-found-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+.error-code {
+  font-family: "Poppins", sans-serif;
+  font-size: 5rem;
+  font-weight: 850;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 14px;
+  letter-spacing: -0.04em;
+}
+
+.not-found-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 750;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.not-found-desc {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.not-found-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+body.dark .not-found-page {
+  background-color: #0a0e1a;
+  background-image: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.18) 0px, transparent 50%),
+                    radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.18) 0px, transparent 50%);
+}
+
+body.dark .not-found-card {
+  background: #111827;
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 24px rgba(99, 102, 241, 0.22);
+}
+
+body.dark .not-found-title {
+  color: #f8fafc;
+}
+
+body.dark .not-found-desc {
+  color: #94a3b8;
+}
+
+body.comfort .not-found-page {
+  background-color: #fbf7ee;
+  background-image: radial-gradient(at 0% 0%, #faeeda 0px, transparent 50%),
+                    radial-gradient(at 100% 100%, #e8f0e9 0px, transparent 50%);
+}
+
+body.comfort .not-found-card {
+  background: #f4ede1;
+  border: 1px solid #dfd2be;
+  box-shadow: 0 12px 24px rgba(60, 45, 30, 0.12);
+}
+
+body.comfort .not-found-card::before {
+  background: linear-gradient(135deg, #c25e00 0%, #b45309 100%);
+}
+
+body.comfort .error-code {
+  background: linear-gradient(135deg, #c25e00 0%, #b45309 100%);
+}
+
+body.comfort .not-found-title {
+  color: #382e22;
+}
+
+body.comfort .not-found-desc {
+  color: #786852;
+}

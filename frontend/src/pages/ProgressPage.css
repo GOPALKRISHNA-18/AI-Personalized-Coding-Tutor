@@ -1,0 +1,865 @@
+.progress-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 24px 60px;
+}
+
+.progress-header-banner {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  box-shadow: 0 6px 16px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -2px rgba(0, 0, 0, 0.04);
+  gap: 24px;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  animation: cardEntrance 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.progress-header-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+.progress-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+  border: 1px solid rgba(99, 102, 241, 0.28);
+}
+
+.progress-h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 750;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.progress-sub {
+  font-size: 14.5px;
+  color: #64748b;
+  max-width: 640px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.summary-stat-capsules {
+  display: flex;
+  gap: 14px;
+}
+
+.capsule-item {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 110px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.capsule-item:hover {
+  background: #ffffff;
+  border-color: #6366f1;
+  transform: translateY(-2px);
+}
+
+.capsule-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.capsule-num {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 750;
+  color: #0f172a;
+}
+
+.capsule-num.streak {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #f59e0b;
+}
+
+.stats-top-grid, .stats-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.difficulty-card, .rating-chart-card, .topics-card, .badges-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 26px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+  animation: cardEntrance 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.difficulty-card:hover, .rating-chart-card:hover, .topics-card:hover, .badges-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -2px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.06);
+  border-color: #6366f1;
+}
+
+.section-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 18px;
+}
+
+.diff-summary-row {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.total-solved-dial {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dial-num {
+  font-family: "Poppins", sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.dial-label {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+.diff-bars-stack {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.diff-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.diff-bar-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+}
+
+.diff-name {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.diff-fraction {
+  color: #64748b;
+  font-size: 12.5px;
+}
+
+.diff-track {
+  width: 100%;
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.diff-fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.chart-sub {
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+.chart-delta {
+  font-size: 12px;
+  font-weight: 700;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 3px 10px;
+  border-radius: 9999px;
+}
+
+.svg-chart-wrapper {
+  width: 100%;
+  height: 160px;
+}
+
+.rating-line-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.heatmap-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 26px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  margin-bottom: 28px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: cardEntrance 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.heatmap-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -2px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.06);
+}
+
+.heatmap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.heatmap-sub {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legend-txt {
+  font-size: 11.5px;
+  color: #64748b;
+}
+
+.legend-cell {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.heatmap-months-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  text-align: center;
+  font-size: 11.5px;
+  color: #64748b;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.heatmap-grid-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 6px;
+}
+
+.heatmap-days-matrix {
+  display: grid;
+  grid-template-rows: repeat(7, 12px);
+  grid-auto-flow: column;
+  gap: 4px;
+  width: max-content;
+}
+
+.heat-cell {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: #f1f5f9;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.heat-cell:hover {
+  transform: scale(1.3);
+  filter: brightness(1.2);
+}
+
+.heat-cell.lvl-0, .legend-cell.lvl-0 {
+  background: #f1f5f9;
+}
+
+.heat-cell.lvl-1, .legend-cell.lvl-1 {
+  background: rgba(16, 185, 129, 0.35);
+}
+
+.heat-cell.lvl-2, .legend-cell.lvl-2 {
+  background: rgba(16, 185, 129, 0.65);
+}
+
+.heat-cell.lvl-3, .legend-cell.lvl-3 {
+  background: #10b981;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.5);
+}
+
+.topics-list-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.topic-mastery-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.topic-meta-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13.5px;
+}
+
+.topic-name {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.topic-count {
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+.topic-track {
+  width: 100%;
+  height: 7px;
+  background: #f1f5f9;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.topic-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 9999px;
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.badges-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.badge-count-pill {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.28);
+  padding: 3px 10px;
+  border-radius: 9999px;
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.badge-box {
+  background: #f1f5f9;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.badge-box:hover {
+  background: #ffffff;
+  border-color: #6366f1;
+  transform: translateY(-3px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.badge-box.unlocked {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: linear-gradient(145deg, #ffffff 0%, rgba(245, 158, 11, 0.08) 100%);
+}
+
+.badge-box.locked {
+  opacity: 0.55;
+  filter: grayscale(0.8);
+}
+
+.badge-symbol {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.badge-card-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.badge-card-year {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 3px;
+}
+
+.locked-pill {
+  font-size: 10px;
+  font-weight: 700;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+.badge-detail-notice {
+  margin-top: 18px;
+  padding: 12px 16px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.28);
+  border-radius: 8px;
+  font-size: 13px;
+  color: #0f172a;
+  line-height: 1.4;
+  animation: cardEntrance 0.25s ease-out;
+}
+
+@media (max-width: 900px) {
+  .stats-top-grid, .stats-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .summary-stat-capsules {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .capsule-item {
+    min-width: auto;
+    flex: 1;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .badges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+body.dark .progress-header-banner {
+  background: #111827;
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(99, 102, 241, 0.15);
+}
+
+body.dark .progress-pill {
+  background: rgba(99, 102, 241, 0.18);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.4);
+}
+
+body.dark .progress-h1 {
+  color: #f8fafc;
+}
+
+body.dark .progress-sub {
+  color: #94a3b8;
+}
+
+body.dark .capsule-item {
+  background: #1e293b;
+  border: 1px solid rgba(99, 102, 241, 0.22);
+}
+
+body.dark .capsule-item:hover {
+  background: #111827;
+  border-color: #818cf8;
+}
+
+body.dark .capsule-label {
+  color: #94a3b8;
+}
+
+body.dark .capsule-num {
+  color: #f8fafc;
+}
+
+body.dark .capsule-num.streak {
+  color: #fbbf24;
+}
+
+body.dark .difficulty-card, body.dark .rating-chart-card, body.dark .topics-card, body.dark .badges-card {
+  background: #111827;
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .difficulty-card:hover, body.dark .rating-chart-card:hover, body.dark .topics-card:hover, body.dark .badges-card:hover {
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.65), 0 0 20px rgba(99, 102, 241, 0.28);
+  border-color: #818cf8;
+}
+
+body.dark .section-title {
+  color: #f8fafc;
+}
+
+body.dark .dial-num {
+  color: #f8fafc;
+}
+
+body.dark .dial-label {
+  color: #94a3b8;
+}
+
+body.dark .diff-name {
+  color: #f8fafc;
+}
+
+body.dark .diff-fraction {
+  color: #94a3b8;
+}
+
+body.dark .diff-track {
+  background: #1e293b;
+}
+
+body.dark .chart-sub {
+  color: #94a3b8;
+}
+
+body.dark .chart-delta {
+  color: #34d399;
+}
+
+body.dark .heatmap-card {
+  background: #111827;
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .heatmap-card:hover {
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.65), 0 0 20px rgba(99, 102, 241, 0.28);
+}
+
+body.dark .heatmap-sub {
+  color: #94a3b8;
+}
+
+body.dark .legend-txt {
+  color: #94a3b8;
+}
+
+body.dark .heatmap-months-row {
+  color: #94a3b8;
+}
+
+body.dark .heat-cell {
+  background: #1e293b;
+}
+
+body.dark .heat-cell.lvl-0, body.dark .legend-cell.lvl-0 {
+  background: #1e293b;
+}
+
+body.dark .heat-cell.lvl-3, body.dark .legend-cell.lvl-3 {
+  background: #34d399;
+}
+
+body.dark .topic-name {
+  color: #f8fafc;
+}
+
+body.dark .topic-count {
+  color: #94a3b8;
+}
+
+body.dark .topic-track {
+  background: #1e293b;
+}
+
+body.dark .badge-count-pill {
+  color: #818cf8;
+  background: rgba(99, 102, 241, 0.18);
+  border: 1px solid rgba(99, 102, 241, 0.4);
+}
+
+body.dark .badge-box {
+  background: #1e293b;
+  border: 1.5px solid rgba(99, 102, 241, 0.22);
+}
+
+body.dark .badge-box:hover {
+  background: #111827;
+  border-color: #818cf8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .badge-box.unlocked {
+  background: linear-gradient(145deg, #111827 0%, rgba(245, 158, 11, 0.08) 100%);
+}
+
+body.dark .badge-card-title {
+  color: #f8fafc;
+}
+
+body.dark .badge-card-year {
+  color: #94a3b8;
+}
+
+body.dark .locked-pill {
+  color: #94a3b8;
+  background: #1e293b;
+}
+
+body.dark .badge-detail-notice {
+  background: rgba(99, 102, 241, 0.18);
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  color: #f8fafc;
+}
+
+body.comfort .progress-header-banner {
+  background: #f4ede1;
+  border: 1px solid #dfd2be;
+  box-shadow: 0 4px 12px rgba(60, 45, 30, 0.08);
+}
+
+body.comfort .progress-header-banner::before {
+  background: linear-gradient(135deg, #c25e00 0%, #b45309 100%);
+}
+
+body.comfort .progress-pill {
+  background: #faeeda;
+  color: #c25e00;
+  border: 1px solid rgba(194, 94, 0, 0.25);
+}
+
+body.comfort .progress-h1 {
+  color: #382e22;
+}
+
+body.comfort .progress-sub {
+  color: #786852;
+}
+
+body.comfort .capsule-item {
+  background: #ebe1cf;
+  border: 1px solid #dfd2be;
+}
+
+body.comfort .capsule-item:hover {
+  background: #f4ede1;
+  border-color: #c25e00;
+}
+
+body.comfort .capsule-label {
+  color: #786852;
+}
+
+body.comfort .capsule-num {
+  color: #382e22;
+}
+
+body.comfort .capsule-num.streak {
+  color: #ef6c00;
+}
+
+body.comfort .difficulty-card, body.comfort .rating-chart-card, body.comfort .topics-card, body.comfort .badges-card {
+  background: #f4ede1;
+  border: 1px solid #dfd2be;
+  box-shadow: 0 1px 3px rgba(60, 45, 30, 0.06);
+}
+
+body.comfort .difficulty-card:hover, body.comfort .rating-chart-card:hover, body.comfort .topics-card:hover, body.comfort .badges-card:hover {
+  box-shadow: 0 12px 24px rgba(60, 45, 30, 0.14);
+  border-color: #c25e00;
+}
+
+body.comfort .section-title {
+  color: #382e22;
+}
+
+body.comfort .dial-num {
+  color: #382e22;
+}
+
+body.comfort .dial-label {
+  color: #786852;
+}
+
+body.comfort .diff-name {
+  color: #382e22;
+}
+
+body.comfort .diff-fraction {
+  color: #786852;
+}
+
+body.comfort .diff-track {
+  background: #ebe1cf;
+}
+
+body.comfort .chart-sub {
+  color: #786852;
+}
+
+body.comfort .chart-delta {
+  color: #2e7d32;
+}
+
+body.comfort .heatmap-card {
+  background: #f4ede1;
+  border: 1px solid #dfd2be;
+  box-shadow: 0 1px 3px rgba(60, 45, 30, 0.06);
+}
+
+body.comfort .heatmap-card:hover {
+  box-shadow: 0 12px 24px rgba(60, 45, 30, 0.14);
+}
+
+body.comfort .heatmap-sub {
+  color: #786852;
+}
+
+body.comfort .legend-txt {
+  color: #786852;
+}
+
+body.comfort .heatmap-months-row {
+  color: #786852;
+}
+
+body.comfort .heat-cell {
+  background: #ebe1cf;
+}
+
+body.comfort .heat-cell.lvl-0, body.comfort .legend-cell.lvl-0 {
+  background: #ebe1cf;
+}
+
+body.comfort .heat-cell.lvl-3, body.comfort .legend-cell.lvl-3 {
+  background: #2e7d32;
+}
+
+body.comfort .topic-name {
+  color: #382e22;
+}
+
+body.comfort .topic-count {
+  color: #786852;
+}
+
+body.comfort .topic-track {
+  background: #ebe1cf;
+}
+
+body.comfort .topic-fill {
+  background: linear-gradient(135deg, #c25e00 0%, #b45309 100%);
+}
+
+body.comfort .badge-count-pill {
+  color: #c25e00;
+  background: #faeeda;
+  border: 1px solid rgba(194, 94, 0, 0.25);
+}
+
+body.comfort .badge-box {
+  background: #ebe1cf;
+  border: 1.5px solid #dfd2be;
+}
+
+body.comfort .badge-box:hover {
+  background: #f4ede1;
+  border-color: #c25e00;
+  box-shadow: 0 1px 3px rgba(60, 45, 30, 0.06);
+}
+
+body.comfort .badge-box.unlocked {
+  background: linear-gradient(145deg, #f4ede1 0%, rgba(245, 158, 11, 0.08) 100%);
+}
+
+body.comfort .badge-card-title {
+  color: #382e22;
+}
+
+body.comfort .badge-card-year {
+  color: #786852;
+}
+
+body.comfort .locked-pill {
+  color: #786852;
+  background: #ebe1cf;
+}
+
+body.comfort .badge-detail-notice {
+  background: #faeeda;
+  border: 1px solid rgba(194, 94, 0, 0.25);
+  color: #382e22;
+}

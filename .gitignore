@@ -1,0 +1,69 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Build outputs
+dist/
+build/
+out/
+coverage/
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# macOS/Windows
+.DS_Store
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Java / Spring Boot
+target/
+.classpath
+.project
+.settings/
+bin/
+*.class
+*.jar
+*.war
+**/application.properties
+**/application-*.properties
+!**/application.properties.example
+
+# Security / certificates
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+
+# Other generated/private files
+*.tmp
+*.bak
+*.orig
+*.rej
+__pycache__/
+.pytest_cache/
+
+# Keep source and build metadata tracked
+!package.json
+!package-lock.json
+!pom.xml
+!frontend/package.json
+!frontend/package-lock.json
+!backend/pom.xml

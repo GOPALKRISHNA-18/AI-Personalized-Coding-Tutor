@@ -1,0 +1,236 @@
+.footer {
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  color: #0f172a;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  width: 100%;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 64px 0 40px;
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1.2fr;
+  gap: 48px;
+  box-sizing: border-box;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footer-logo-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.28);
+}
+
+.footer-brand-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 750;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  max-width: 340px;
+}
+
+.social-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social-icon-btn:hover {
+  background: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+  border-color: #6366f1;
+  transform: translateY(-2px);
+}
+
+.footer-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 14.5px;
+  font-weight: 750;
+  color: #0f172a;
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link-item a {
+  font-size: 14px;
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease;
+  display: inline-block;
+}
+
+.footer-link-item a:hover {
+  color: #6366f1;
+  transform: translateX(3px);
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid #e2e8f0;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 13px;
+  color: #64748b;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 580px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 48px 0 32px;
+  }
+}
+
+body.dark .footer {
+  background: #111827;
+  border-top: 1px solid rgba(99, 102, 241, 0.22);
+  color: #f8fafc;
+}
+
+body.dark .footer-logo-box {
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+body.dark .footer-brand-text {
+  color: #f8fafc;
+}
+
+body.dark .footer-tagline {
+  color: #94a3b8;
+}
+
+body.dark .social-icon-btn {
+  background: #1e293b;
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  color: #94a3b8;
+}
+
+body.dark .social-icon-btn:hover {
+  background: rgba(99, 102, 241, 0.18);
+  color: #818cf8;
+  border-color: #818cf8;
+}
+
+body.dark .footer-heading {
+  color: #f8fafc;
+}
+
+body.dark .footer-link-item a {
+  color: #94a3b8;
+}
+
+body.dark .footer-link-item a:hover {
+  color: #818cf8;
+}
+
+body.dark .footer-bottom-bar {
+  border-top: 1px solid rgba(99, 102, 241, 0.22);
+  color: #94a3b8;
+}
+
+body.comfort .footer {
+  background: #f4ede1;
+  border-top: 1px solid #dfd2be;
+  color: #382e22;
+}
+
+body.comfort .footer-logo-box {
+  background: linear-gradient(135deg, #c25e00 0%, #b45309 100%);
+  box-shadow: 0 4px 12px rgba(194, 94, 0, 0.25);
+}
+
+body.comfort .footer-brand-text {
+  color: #382e22;
+}
+
+body.comfort .footer-tagline {
+  color: #786852;
+}
+
+body.comfort .social-icon-btn {
+  background: #ebe1cf;
+  border: 1px solid #dfd2be;
+  color: #786852;
+}
+
+body.comfort .social-icon-btn:hover {
+  background: #faeeda;
+  color: #c25e00;
+  border-color: #c25e00;
+}
+
+body.comfort .footer-heading {
+  color: #382e22;
+}
+
+body.comfort .footer-link-item a {
+  color: #786852;
+}
+
+body.comfort .footer-link-item a:hover {
+  color: #c25e00;
+}
+
+body.comfort .footer-bottom-bar {
+  border-top: 1px solid #dfd2be;
+  color: #786852;
+}

@@ -1,0 +1,107 @@
+.app-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  width: fit-content;
+  border: 1px solid transparent;
+}
+
+.app-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.app-badge-default {
+  background: #f1f5f9;
+  color: #64748b;
+  border-color: #edf2f7;
+}
+
+.app-badge-primary {
+  background: rgba(99, 102, 241, 0.12);
+  color: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.28);
+}
+
+.app-badge-success {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  border-color: rgba(16, 185, 129, 0.28);
+}
+
+.app-badge-warning {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.28);
+}
+
+.app-badge-error {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.28);
+}
+
+.app-badge-cyan {
+  background: rgba(6, 182, 212, 0.12);
+  color: #06b6d4;
+  border-color: rgba(6, 182, 212, 0.28);
+}
+
+body.dark .app-badge-default {
+  background: #1e293b;
+  color: #94a3b8;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark .app-badge-primary {
+  color: rgba(99, 102, 241, 0.18);
+}
+
+body.dark .app-badge-success {
+  color: #34d399;
+}
+
+body.dark .app-badge-warning {
+  color: #fbbf24;
+}
+
+body.dark .app-badge-error {
+  color: #f87171;
+}
+
+body.dark .app-badge-cyan {
+  color: #22d3ee;
+}
+
+body.comfort .app-badge-default {
+  background: #ebe1cf;
+  color: #786852;
+  border-color: #e8ddcc;
+}
+
+body.comfort .app-badge-primary {
+  color: #faeeda;
+}
+
+body.comfort .app-badge-success {
+  color: #2e7d32;
+}
+
+body.comfort .app-badge-warning {
+  color: #ef6c00;
+}
+
+body.comfort .app-badge-error {
+  color: #c62828;
+}
+
+body.comfort .app-badge-cyan {
+  color: #3b7a57;
+}

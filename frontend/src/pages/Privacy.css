@@ -1,0 +1,258 @@
+.legal-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8fafc;
+  color: #0f172a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+}
+
+.legal-main {
+  flex: 1;
+  padding: 60px 0 80px;
+}
+
+.legal-container {
+  width: 90%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.legal-header {
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.legal-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 34px;
+  font-weight: 750;
+  color: #0f172a;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.legal-updated {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+.legal-toc {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 48px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.toc-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-weight: 750;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+
+.toc-list {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toc-link {
+  font-size: 14px;
+  color: #6366f1;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.toc-link:hover {
+  text-decoration: underline;
+}
+
+.legal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.legal-section {
+  scroll-margin-top: 100px;
+}
+
+.section-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 750;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+
+.section-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #64748b;
+  margin-bottom: 14px;
+}
+
+.section-list {
+  margin: 0 0 14px 0;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section-list li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+.contact-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.contact-box p {
+  margin: 0 0 8px 0;
+  font-size: 14.5px;
+  color: #64748b;
+}
+
+.contact-box p:last-child {
+  margin: 0;
+}
+
+.contact-box a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+body.dark .legal-page {
+  background-color: #0a0e1a;
+  color: #f8fafc;
+}
+
+body.dark .legal-header {
+  border-bottom: 1px solid rgba(99, 102, 241, 0.22);
+}
+
+body.dark .legal-title {
+  color: #f8fafc;
+}
+
+body.dark .legal-updated {
+  color: #94a3b8;
+}
+
+body.dark .legal-toc {
+  background: #111827;
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .toc-title {
+  color: #f8fafc;
+}
+
+body.dark .toc-link {
+  color: #818cf8;
+}
+
+body.dark .section-title {
+  color: #f8fafc;
+}
+
+body.dark .section-text {
+  color: #94a3b8;
+}
+
+body.dark .section-list li {
+  color: #94a3b8;
+}
+
+body.dark .contact-box {
+  background: #111827;
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .contact-box p {
+  color: #94a3b8;
+}
+
+body.dark .contact-box a {
+  color: #818cf8;
+}
+
+body.comfort .legal-page {
+  background-color: #fbf7ee;
+  color: #382e22;
+}
+
+body.comfort .legal-header {
+  border-bottom: 1px solid #dfd2be;
+}
+
+body.comfort .legal-title {
+  color: #382e22;
+}
+
+body.comfort .legal-updated {
+  color: #786852;
+}
+
+body.comfort .legal-toc {
+  background: #f4ede1;
+  border: 1px solid #dfd2be;
+  box-shadow: 0 1px 3px rgba(60, 45, 30, 0.06);
+}
+
+body.comfort .toc-title {
+  color: #382e22;
+}
+
+body.comfort .toc-link {
+  color: #c25e00;
+}
+
+body.comfort .section-title {
+  color: #382e22;
+}
+
+body.comfort .section-text {
+  color: #786852;
+}
+
+body.comfort .section-list li {
+  color: #786852;
+}
+
+body.comfort .contact-box {
+  background: #f4ede1;
+  border: 1px solid #dfd2be;
+  box-shadow: 0 1px 3px rgba(60, 45, 30, 0.06);
+}
+
+body.comfort .contact-box p {
+  color: #786852;
+}
+
+body.comfort .contact-box a {
+  color: #c25e00;
+}
